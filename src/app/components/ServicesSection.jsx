@@ -167,7 +167,7 @@ export default async function ServicesSection() {
                 <Image src={item?.img} width={400} height={308} alt="card image" className="rounded-2xl"/>
               </figure>
               <div className="card-body items-center text-center">
-                <h2 className="card-title text-3xl font-semibold">{item?.title}</h2>
+                <h2 className="card-title text-3xl font-semibold text-base-content">{item?.title}</h2>
                 <div className="flex gap-28 items-center text-red-500">
                   <p className="text-2xl ">Price : ${item?.price}</p>
                   <Link href={`/services/${item?._id}`}><GoArrowRight size={30}/></Link>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import ThemeToggle from "./ThemeToggle";
 
 export default function NavBar() {
   const navLinks = () => {
@@ -25,7 +26,7 @@ export default function NavBar() {
     );
   };
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm text-base-content sticky top-0 z-50">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -47,19 +48,20 @@ export default function NavBar() {
           </div>
           <ul
             tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow "
           >
             {navLinks()}
           </ul>
         </div>
-        <Link href='/'><Image src="/assets/logo.svg" alt='logo' width={50} height={50} /></Link>
+        <Link href='/' className=""><Image src="/assets/logo.svg" alt='logo' width={50} height={50} /></Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-center hidden lg:flex ">
         <ul className="menu menu-horizontal px-1">
             {navLinks()}</ul>
       </div>
       <div className="navbar-end">
         <a className="btn btn-outline">Button</a>
+        <ThemeToggle />
       </div>
     </div>
   );
