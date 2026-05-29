@@ -3,6 +3,8 @@ import BannerPage from "./components/Banner";
 import AboutSection from "./components/AboutSection";
 import TopInfoBar from "./components/TopInforBar";
 import ProductSection from "./components/ProductSection";
+import MeetOurTeam from "./components/MeetOurTeam";
+import ChooseUs from "./components/ChooseUs";
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
     <ServicesSection />
     <TopInfoBar />
     <ProductSection />
+    <MeetOurTeam />
+    <ChooseUs />
     </>
   );
 }
