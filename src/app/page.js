@@ -5,6 +5,7 @@ import TopInfoBar from "./components/TopInforBar";
 import ProductSection from "./components/ProductSection";
 import MeetOurTeam from "./components/MeetOurTeam";
 import ChooseUs from "./components/ChooseUs";
+import TestimonialSection from "./components/TestimonialSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
     <ProductSection />
     <MeetOurTeam />
     <ChooseUs />
+    <TestimonialSection />
     </>
   );
 }
