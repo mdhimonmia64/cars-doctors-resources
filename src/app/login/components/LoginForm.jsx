@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { IoMdEyeOff } from "react-icons/io";
 import { IoMdEye } from "react-icons/io";
-// import { signIn } from "next-auth/react";
+import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 // import SocialLogin from "./SocialLogin";
@@ -16,6 +16,7 @@ export default function LoginForm() {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
+    console.log({email,password})
     toast("submitting....")
     try {
       const response = await signIn("credentials", { email, password, callbackUrl: "/" ,redirect:false,});

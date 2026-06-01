@@ -3,9 +3,10 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
-// import { registerUser } from "@/app/actions/auth/registerUser";
 import { IoMdEyeOff } from "react-icons/io";
 import { IoMdEye } from "react-icons/io";
+import { registerUser } from "@/app/actions/auth/registerUser";
+import toast from "react-hot-toast";
 // import SocialLogin from "@/app/login/components/SocialLogin";
 
 export default function RegisterForm() {
@@ -17,7 +18,7 @@ export default function RegisterForm() {
     const email = form.email.value;
     const password = form.password.value;
     await registerUser({ name, email, password });
-    alert('Register successfully')
+    toast.success('Register successfully');
     form.reset()
   };
   return (
