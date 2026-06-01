@@ -59,8 +59,13 @@ export default function NavBar() {
         <ul className="menu menu-horizontal px-1">
             {navLinks()}</ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn btn-outline">Button</a>
+      <div className="navbar-end gap-2">
+        <Link href="/register" className="btn btn-outline">
+          Register
+        </Link>
+        <Link href="/login" className="btn btn-outline">
+          Login
+        </Link>
         <ThemeToggle />
       </div>
     </div>
