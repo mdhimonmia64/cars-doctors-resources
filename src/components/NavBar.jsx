@@ -1,9 +1,12 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import ThemeToggle from "./ThemeToggle";
+import { signOut, useSession } from "next-auth/react";
 
 export default function NavBar() {
+  const { data: session, status } = useSession();
   const navLinks = () => {
     return (
       <>
@@ -53,19 +56,30 @@ export default function NavBar() {
             {navLinks()}
           </ul>
         </div>
-        <Link href='/' className=""><Image src="/assets/logo.svg" alt='logo' width={50} height={50} /></Link>
+        <Link href="/" className="">
+          <Image src="/assets/logo.svg" alt="logo" width={50} height={50} />
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex ">
-        <ul className="menu menu-horizontal px-1">
-            {navLinks()}</ul>
+        <ul className="menu menu-horizontal px-1">{navLinks()}</ul>
       </div>
       <div className="navbar-end gap-2">
-        <Link href="/register" className="btn btn-outline">
-          Register
-        </Link>
-        <Link href="/login" className="btn btn-outline">
-          Login
-        </Link>
+        {status === "authenticated" ? (
+          <>
+            <li className="btn" onClick={() => signOut()}>
+              Log Out
+            </li>
+          </>
+        ) : (
+          <>
+            <Link href="/register" className="btn btn-outline">
+              Register
+            </Link>
+            <Link href="/login" className="btn btn-outline">
+              Login
+            </Link>
+          </>
+        )}
         <ThemeToggle />
       </div>
     </div>
