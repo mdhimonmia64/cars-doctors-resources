@@ -6,7 +6,7 @@ import { IoMdEye } from "react-icons/io";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
-// import SocialLogin from "./SocialLogin";
+import SocialLogin from "./SocialLogin";
 
 export default function LoginForm() {
   const router = useRouter();
@@ -71,8 +71,7 @@ export default function LoginForm() {
         Sign In
       </button>
       <p className="text-center">Or Sign In with</p>
-      {/* <SocialLogin /> */}
-
+      <SocialLogin />
       <p className="text-center">
         Already have an account?{" "}
         <Link href="/register" className="text-orange-500 font-bold">

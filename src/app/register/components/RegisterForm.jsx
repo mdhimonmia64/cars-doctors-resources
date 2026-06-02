@@ -1,13 +1,12 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import { FcGoogle } from "react-icons/fc";
-import { BsGithub } from "react-icons/bs";
 import { IoMdEyeOff } from "react-icons/io";
 import { IoMdEye } from "react-icons/io";
 import { registerUser } from "@/app/actions/auth/registerUser";
 import toast from "react-hot-toast";
-// import SocialLogin from "@/app/login/components/SocialLogin";
+import SocialLogin from "@/app/login/components/SocialLogin";
+
 
 export default function RegisterForm() {
   const [show, setShow] = useState(false);
@@ -18,11 +17,14 @@ export default function RegisterForm() {
     const email = form.email.value;
     const password = form.password.value;
     await registerUser({ name, email, password });
-    toast.success('Register successfully');
-    form.reset()
+    toast.success("Register successfully");
+    form.reset();
   };
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-lg space-y-8 bg-blue-100 p-8 md:p-20 rounded-2xl">
+    <form
+      onSubmit={handleSubmit}
+      className="w-full max-w-lg space-y-8 bg-blue-100 p-8 md:p-20 rounded-2xl"
+    >
       <label className="form-control w-full">
         <div className="label w-full">
           <span className="label-text  font-bold">Name</span>
@@ -56,8 +58,11 @@ export default function RegisterForm() {
             placeholder="Type here"
             className="input input-bordered w-full"
           />
-          <span onClick={() => setShow(!show)} className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer">
-            {show ? <IoMdEyeOff size={20}/> : <IoMdEye size={20}/>}
+          <span
+            onClick={() => setShow(!show)}
+            className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"
+          >
+            {show ? <IoMdEyeOff size={20} /> : <IoMdEye size={20} />}
           </span>
         </div>
       </label>
@@ -65,6 +70,7 @@ export default function RegisterForm() {
         Sign Up
       </button>
       <p className="text-center">Or Sign In with</p>
+      <SocialLogin />
       <p className="text-center">
         Don't Have an account?{" "}
         <Link href="/login" className="text-orange-500 font-bold">
