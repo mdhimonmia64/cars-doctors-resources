@@ -66,6 +66,7 @@ export default function NavBar() {
       <div className="navbar-end gap-2">
         {status === "authenticated" ? (
           <>
+            <Image src={session?.user?.image} alt="profile" width={30} height={30} className="rounded-full" />
             <li className="btn" onClick={() => signOut()}>
               Log Out
             </li>

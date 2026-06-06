@@ -1,14 +1,23 @@
-import { signIn } from "next-auth/react";
-import React from "react";
+"use client";
+import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import React, { useEffect } from "react";
+import toast from "react-hot-toast";
 import { BsGithub } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 
 export default function SocialLogin() {
-    const handleSocialLogin = async (providerName) => {
-        console.log("social login clicked for", providerName);
-        const result = await signIn(providerName, {redirect: false})
-        console.log(result);
+  const router = useRouter();
+  const session = useSession();
+    const handleSocialLogin =(providerName) => {
+        signIn(providerName);
     };
+    useEffect(() => {
+      if(session.status == "authenticated"){
+        router.push("/");
+        toast.success("Successfully Logged In");
+      }
+    })
   return (
     <div className="flex items-center justify-center gap-8">
       <p onClick={() => handleSocialLogin("google")}><FcGoogle size={35} /></p>
