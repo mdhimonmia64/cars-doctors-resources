@@ -23,6 +23,9 @@ export default function NavBar() {
           <Link href="/blog">Blog</Link>
         </li>
         <li>
+          <Link href="/my-bookings">My Bookings</Link>
+        </li>
+        <li>
           <Link href="/contact">Contact</Link>
         </li>
       </>
@@ -66,7 +69,13 @@ export default function NavBar() {
       <div className="navbar-end gap-2">
         {status === "authenticated" ? (
           <>
-            <Image src={session?.user?.image} alt="profile" width={30} height={30} className="rounded-full" />
+            <Image
+              src={session?.user?.image}
+              alt="profile"
+              width={30}
+              height={30}
+              className="rounded-full"
+            />
             <li className="btn" onClick={() => signOut()}>
               Log Out
             </li>

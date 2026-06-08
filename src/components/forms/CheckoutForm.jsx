@@ -6,7 +6,6 @@ import toast from "react-hot-toast";
 
 const CheckoutForm = ({ data }) => {
   const { data: session } = useSession();
-  console.log(session);
 
   const handleBookService = async (e) => {
     toast("Submitting Booking...");
@@ -35,21 +34,18 @@ const CheckoutForm = ({ data }) => {
       service_price: data.price,
     };
 
-    console.log(bookingPayload);
-    const res = await fetch(
-      "https://nextjs-car-doctor-kappa.vercel.app/api/service",
-      {
-        method: "POST",
-        body: JSON.stringify(bookingPayload),
-      },
-    );
+    const res = await fetch("/api/service",{
+      method:"POST",
+      body:JSON.stringify(bookingPayload),
+    });
     const postedResponse = await res.json();
-    console.log("POSTED DATA", postedResponse);
+    form.reset();
+    
   };
 
   return (
     <div className="my-10">
-      <div className="w-11/12 mx-auto">
+      <div className="container mx-auto">
         <h2 className="text-center text-3xl mb-4">
           Book Service : {data?.title}
         </h2>
@@ -57,68 +53,68 @@ const CheckoutForm = ({ data }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Name</span>
-              </label>
+                <span className="label-text">Name :</span>
+              </label><br />
               <input
                 defaultValue={session?.user?.name}
                 readOnly
                 type="text"
                 name="name"
-                className="input input-bordered"
+                className="input input-bordered w-full"
               />
             </div>
 
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Email</span>
-              </label>
+                <span className="label-text">Email :</span>
+              </label><br />
               <input
                 defaultValue={session?.user?.email}
                 readOnly
                 type="text"
                 name="email"
                 placeholder="email"
-                className="input input-bordered"
+                className="input input-bordered w-full"
               />
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Due amount</span>
-              </label>
+                <span className="label-text">Due amount :</span>
+              </label><br />
               <input
                 type="text"
                 defaultValue={data?.price}
                 readOnly
                 name="price"
-                className="input input-bordered"
+                className="input input-bordered w-full"
               />
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Date</span>
-              </label>
-              <input type="date" name="date" className="input input-bordered" />
+                <span className="label-text">Date :</span>
+              </label><br />
+              <input type="date" name="date" className="input input-bordered w-full" />
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Phone</span>
-              </label>
+                <span className="label-text">Phone :</span>
+              </label><br />
               <input
                 type="text"
                 name="phone"
                 placeholder="Your Phone"
-                className="input input-bordered"
+                className="input input-bordered w-full"
               />
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Present Address</span>
-              </label>
+                <span className="label-text">Present Address :</span>
+              </label><br />
               <input
                 type="text"
                 name="address"
                 placeholder="Your Address"
-                className="input input-bordered"
+                className="input input-bordered w-full"
               />
             </div>
           </div>
