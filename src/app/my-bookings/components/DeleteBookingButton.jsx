@@ -1,5 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 import { MdOutlineDelete } from "react-icons/md";
 
 export default function DeleteBookingButton({id}) {
@@ -9,6 +10,7 @@ export default function DeleteBookingButton({id}) {
             method:"DELETE"
         })
         const data = await res.json();
+        toast.success("Booking Deleted Successfully");
         router.refresh()
         console.log(data)
     }

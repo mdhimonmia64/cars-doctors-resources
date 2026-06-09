@@ -59,7 +59,7 @@ export default function NavBar() {
             {navLinks()}
           </ul>
         </div>
-        <Link href="/" className="">
+        <Link href="/">
           <Image src="/assets/logo.svg" alt="logo" width={50} height={50} />
         </Link>
       </div>
