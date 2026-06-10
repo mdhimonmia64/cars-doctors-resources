@@ -2,7 +2,9 @@ import { getToken } from "next-auth/jwt"
 import { NextResponse } from "next/server"
 
 export const proxy = async (req) => {
-    const token = await getToken({ req })
+    const token = await getToken({ req,
+        secureCookie: process.env.NODE_ENV === "production" ? true : false,
+     })
     if (token) {
         return NextResponse.next()
     }
@@ -14,3 +16,4 @@ export const proxy = async (req) => {
 export const config = {
     matcher: ['/my-bookings', '/my-bookings/:path*', '/checkout/:path*'],
 }
+
