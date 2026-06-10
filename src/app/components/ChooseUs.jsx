@@ -19,9 +19,8 @@ export default function ChooseUs() {
 
   return (
     <section className="container mx-auto py-16 text-center">
-      {/* Heading */}
       <h2 className="text-4xl font-bold mt-2">Why Choose Us</h2>
-      <p className="text-gray-500 mt-3 max-w-2xl mx-auto">
+      <p className=" mt-3 max-w-2xl mx-auto">
         The Majority Have Suffered Alteration In Some Form, By Injected Humour,
         Or Randomised Words Which Don't Look Even Slightly Believable.
       </p>

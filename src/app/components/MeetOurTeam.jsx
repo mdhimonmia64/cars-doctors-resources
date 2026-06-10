@@ -71,7 +71,7 @@ export default function MeetOurTeam() {
       >
         {data.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="bg-white p-4 rounded-xl shadow-md hover:-translate-y-1 transition ">
+            <div className="bg-base-200 border border-gray-400 p-4 rounded-xl shadow-md hover:-translate-y-1 transition ">
               <Image
                 src={item?.img}
                 width={300}

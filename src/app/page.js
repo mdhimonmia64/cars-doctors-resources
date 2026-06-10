@@ -9,7 +9,7 @@ import TestimonialSection from "./components/TestimonialSection";
 
 export default function Home() {
   return (
-    <>
+    <div className="bg-base-200 text-base-content">
     <BannerPage />
     <AboutSection />
     <ServicesSection />
@@ -18,6 +18,6 @@ export default function Home() {
     <MeetOurTeam />
     <ChooseUs />
     <TestimonialSection />
-    </>
+    </div>
   );
 }

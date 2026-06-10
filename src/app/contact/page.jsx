@@ -28,7 +28,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="py-16 px-6 md:px-16 bg-blue-50">
+    <section className="py-16 px-6 md:px-16 bg-base-200 text-base-content">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
         <div>
@@ -36,13 +36,13 @@ export default function ContactSection() {
             Get In Touch
           </h2>
 
-          <p className="text-gray-500 mt-4 leading-relaxed hover:text-black">
+          <p className="text-base-content mt-4 leading-relaxed ">
             Have any questions about our car services? Feel free to contact us.
             Our team is always ready to help you with repair, maintenance, and
             diagnostics support.
           </p>
 
-          <div className="mt-6 space-y-2 text-gray-600 hover:text-black">
+          <div className="mt-6 space-y-2 text-base-content ">
             <p>📍 Mymensingh, Bangladesh</p>
             <p>📞 +880 1319959656</p>
             <p>📧 mdhimonmia64@gmail.com</p>
@@ -52,7 +52,7 @@ export default function ContactSection() {
           <form onSubmit={handleSubmit} className="space-y-4">
 
             <div>
-              <label className="text-sm font-medium">Name</label>
+              <label className="text-sm font-medium text-black">Name</label>
               <input
                 type="text"
                 name="name"
@@ -62,7 +62,7 @@ export default function ContactSection() {
             </div>
 
             <div>
-              <label className="text-sm font-medium">Email</label>
+              <label className="text-sm font-medium text-black">Email</label>
               <input
                 type="email"
                 name="email"
@@ -72,7 +72,7 @@ export default function ContactSection() {
             </div>
 
             <div>
-              <label className="text-sm font-medium">Message</label>
+              <label className="text-sm font-medium text-black">Message</label>
               <textarea
                 name="message"
                 rows="4"

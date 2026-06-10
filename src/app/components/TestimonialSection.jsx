@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { FaStar, FaQuoteRight, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
@@ -62,7 +63,7 @@ export default function TestimonialSection() {
   return (
     <section className="py-20 px-4 text-center">
       <h2 className="text-4xl font-bold">What Customer Says</h2>
-      <p className="text-gray-500 mt-2 max-w-xl mx-auto">
+      <p className=" mt-2 max-w-xl mx-auto">
         The majority have suffered alteration in some form, by injected humour,
         or randomised words which don't look even slightly believable.
       </p>
@@ -78,24 +79,26 @@ export default function TestimonialSection() {
         {visibleCards.map((t, i) => (
           <div
             key={i}
-            className="flex-1 bg-white border rounded-xl p-6 text-left shadow-sm hover:shadow-2xl hover:-translate-y-2 transition"
+            className="flex-1 bg-base-200 border rounded-xl p-6 text-left shadow-sm hover:shadow-2xl hover:-translate-y-2 transition"
           >
             <div className="flex items-center gap-4 hover:shadow-2xl hover:-translate-y-2 transition">
-              <img
+              <Image
                 src={t.img}
-                alt=""
-                className="w-14 h-14 rounded-full"
+                alt="image-logo"
+                width={44}
+                height={44}
+                className="rounded-full"
               />
 
               <div>
                 <h3 className="font-semibold">{t.name}</h3>
-                <p className="text-sm text-gray-500">{t.role}</p>
+                <p className="text-sm ">{t.role}</p>
               </div>
 
               <FaQuoteRight className="ml-auto text-3xl text-pink-200" />
             </div>
 
-            <p className="text-gray-500 mt-4 text-sm">{t.text}</p>
+            <p className=" mt-4 text-sm">{t.text}</p>
 
             <div className="flex text-orange-400 mt-3">
               {[...Array(5)].map((_, i) => (

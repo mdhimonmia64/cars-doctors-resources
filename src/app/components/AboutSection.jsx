@@ -5,7 +5,7 @@ import Typewriter from "typewriter-effect";
 
 export default function AboutSection() {
   return (
-    <div className="bg-gray-200 container mx-auto rounded-2xl my-10">
+    <div className="bg-gray-200 dark:bg-base-200  text-black container mx-auto rounded-2xl my-10">
       <div className="grid md:grid-cols-2 gap-10 items-center">
         <div className="relative" data-aos="fade-down">
           <div className="w-[75%] hover-3d">

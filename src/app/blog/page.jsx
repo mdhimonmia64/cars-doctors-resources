@@ -28,13 +28,13 @@ const blogs = [
 
 export default function BlogSection() {
   return (
-    <section className="py-16 px-6 md:px-16 bg-blue-50">
+    <section className="py-16 px-6 md:px-16 bg-base-200 text-base-content">
       <div className="max-w-6xl mx-auto">
 
         <h2 className="text-3xl md:text-5xl font-bold text-center hover:text-blue-600">
           Latest Blogs
         </h2>
-        <p className="text-gray-500 text-center mt-3 max-w-2xl mx-auto">
+        <p className="text-base-content text-center mt-3 max-w-2xl mx-auto">
           Stay updated with car maintenance tips, repair guides, and expert advice
           from Car Doctor professionals.
         </p>
@@ -43,7 +43,7 @@ export default function BlogSection() {
           {blogs.map((blog) => (
             <div
               key={blog.id}
-              className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition duration-300"
+              className=" border border-gray-600 shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition duration-300"
             >
 
               <div className="relative w-full h-[200px]">
@@ -56,13 +56,13 @@ export default function BlogSection() {
               </div>
 
               <div className="p-5">
-                <p className="text-sm text-gray-400">{blog.date}</p>
+                <p className="text-sm text-gray-300">{blog.date}</p>
 
                 <h3 className="text-xl font-bold mt-1">
                   {blog.title}
                 </h3>
 
-                <p className="text-gray-500 mt-2 text-sm">
+                <p className="text-gray-300 mt-2 text-sm">
                   {blog.desc}
                 </p>
 

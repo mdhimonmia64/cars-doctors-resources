@@ -25,18 +25,18 @@ export default function AboutSection() {
           data-aos-easing="linear"
           data-aos-duration="1500"
         >
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight hover:text-blue-500">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight text-base-content hover:text-blue-500">
             About Car Doctor
           </h2>
 
-          <p className="text-gray-500 mt-4 leading-relaxed">
+          <p className=" mt-4 leading-relaxed text-base-content">
             Car Doctor is a modern car service platform designed to make vehicle
             maintenance simple, fast, and reliable. We provide high-quality car
             repair, diagnostics, and maintenance services with professional
             mechanics and advanced tools.
           </p>
 
-          <p className="text-gray-500 mt-4 leading-relaxed">
+          <p className=" mt-4 leading-relaxe text-base-content">
             Our goal is to ensure your car runs smoothly and safely on the road.
             From engine diagnostics to full servicing, we deliver trusted
             solutions at an affordable price.
