@@ -4,10 +4,10 @@ import React from 'react'
 
 export default async function ServiceDetailsPage({params}) {
     const p = await params;
-    const res = await fetch(`https://car-doctor-resources.vercel.app/api/service/${p.id}`);
+    const res = await fetch(`http://localhost:3000/api/service/${p.id}`);
     const data = await res.json();
   return (
-    <div>
+    <div className='bg-base-200 text-base-content'>
       <section className="flex justify-center">
         <figure className=" relative " data-aos="zoom-in">
           <Image
@@ -25,7 +25,7 @@ export default async function ServiceDetailsPage({params}) {
           </div>
         </figure>
       </section>
-      <section className="container mx-auto grid grid-cols-12 gap-1 md:gap-4 pt-5 md:pt-16">
+      <section className="container mx-auto grid grid-cols-12 gap-1 md:gap-4 pt-5 md:pt-16 ">
         <div className="col-span-9 space-y-4 md:space-y-10 p-3 md:p-0">
           <div className="relative w-full h-[200px] md:h-[400px] overflow-hidden">
             <Image

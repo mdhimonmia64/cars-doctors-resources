@@ -27,7 +27,7 @@ const BookingUpdateForm = ({ data }) => {
 
     console.log(bookingPayload);
     const res = await fetch(
-      `https://car-doctor-resources.vercel.app/api/my-bookings/${data._id}`,
+      `http://localhost:3000/api/my-bookings/${data._id}`,
       {
         method: "PATCH",
         body: JSON.stringify(bookingPayload),
@@ -39,7 +39,7 @@ const BookingUpdateForm = ({ data }) => {
   };
 
   return (
-    <div className="my-10">
+    <div className="py-10 bg-base-200 text-base-content">
       <div className="container mx-auto">
         <h2 className="text-center text-3xl mb-4">
           Update Booking : {data?.service_name}

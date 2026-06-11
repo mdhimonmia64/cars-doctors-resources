@@ -5,7 +5,7 @@ import { FaRegEdit } from "react-icons/fa";
 
 const MyAllBookings = ({ data }) => {
   return (
-    <div className="my-8">
+    <div className="py-10 bg-base-200 text-base-content">
       <h1 className="text-center font-bold text-3xl my-4">My All Bookings</h1>
       <div className="w-11/12 mx-auto overflow-x-auto">
         <table className="w-full table table-zebra">

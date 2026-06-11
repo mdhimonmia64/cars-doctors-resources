@@ -3,7 +3,7 @@ import { headers } from "next/headers";
 import React from "react";
 
 const fetchMyBookings = async () => {
-  const res = await fetch("https://car-doctor-resources.vercel.app/api/service", {
+  const res = await fetch("http://localhost:3000/api/service", {
     headers:new Headers(await headers()),
   });
   const d = await res.json();
