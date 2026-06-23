@@ -10,7 +10,7 @@ export default async function ServicesSection() {
   const data = await serviceCollection.find({}).toArray();
 
   return (
-    <div className="container mx-auto">
+    <div id="ser" className="container mx-auto">
       <h2 className="md:text-3xl lg:text-5xl  font-bold leading-tight mb-4 text-center ">
         Our Service Area
       </h2>

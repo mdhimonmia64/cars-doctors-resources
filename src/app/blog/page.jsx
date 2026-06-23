@@ -56,13 +56,13 @@ export default function BlogSection() {
               </div>
 
               <div className="p-5">
-                <p className="text-sm text-gray-300">{blog.date}</p>
+                <p className="text-sm">{blog.date}</p>
 
                 <h3 className="text-xl font-bold mt-1">
                   {blog.title}
                 </h3>
 
-                <p className="text-gray-300 mt-2 text-sm">
+                <p className="mt-2 text-sm">
                   {blog.desc}
                 </p>
 
