@@ -25,6 +25,9 @@ export default function NavBar() {
         <li>
           <Link href="/contact">Contact</Link>
         </li>
+        <li>
+          <Link href="/mentor">Mentor</Link>
+        </li>
       </>
     );
   };
