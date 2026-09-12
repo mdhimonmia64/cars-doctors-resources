@@ -17,7 +17,6 @@ import {
   CheckCircle,
 } from "lucide-react";
 
-// Animations config
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
@@ -94,21 +93,15 @@ export default function AboutSection() {
   return (
     <div className="bg-base-200 text-base-content overflow-hidden min-h-screen">
       
-      {/* 1. HERO SECTION WITH IMAGE COLLAGE & ENTRANCE ANIMATIONS */}
       <section className="py-20 px-6 md:px-16 bg-gradient-to-b from-base-100 to-base-200 relative">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* Hero text */}
           <motion.div
             className="lg:col-span-7 flex flex-col justify-center space-y-6"
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
           >
-            <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold self-start tracking-wider uppercase">
-              <Sparkles className="w-3.5 h-3.5" />
-              Est. 2012 • Premium Car Care
-            </motion.div>
             
             <motion.h1 
               variants={fadeInUp}
@@ -144,17 +137,14 @@ export default function AboutSection() {
             </motion.div>
           </motion.div>
 
-          {/* Hero Image Collage */}
           <motion.div 
             className="lg:col-span-5 relative w-full h-[400px] md:h-[480px]"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            {/* Background glowing orb */}
             <div className="absolute -inset-4 bg-primary/10 rounded-full blur-3xl opacity-60 animate-pulse z-0" />
             
-            {/* Primary Main Image */}
             <motion.div 
               className="absolute left-0 top-0 w-[80%] h-[75%] rounded-3xl overflow-hidden shadow-2xl border-4 border-base-100 z-10 group"
               whileHover={{ scale: 1.02 }}
@@ -172,7 +162,6 @@ export default function AboutSection() {
               </div>
             </motion.div>
 
-            {/* Overlapping Secondary Image */}
             <motion.div 
               className="absolute right-0 bottom-4 w-[55%] h-[55%] rounded-3xl overflow-hidden shadow-2xl border-4 border-base-100 z-20 group"
               whileHover={{ scale: 1.05, y: -5 }}
@@ -193,7 +182,7 @@ export default function AboutSection() {
         </div>
       </section>
 
-      {/* 2. STATS SECTION WITH FLOATING CARDS & HOVER EFFECTS */}
+
       <section className="py-12 px-6 md:px-16 -mt-8 relative z-30">
         <div className="max-w-7xl mx-auto">
           <motion.div 
@@ -210,7 +199,7 @@ export default function AboutSection() {
                   key={index}
                   variants={fadeInUp}
                   whileHover={{ y: -8, shadow: "0 20px 25px -5px rgb(0 0 0 / 0.1)" }}
-                  className="bg-base-100 p-6 md:p-8 rounded-3xl shadow-lg border border-base-content/5 flex flex-col items-center text-center space-y-3 cursor-pointer"
+                  className="bg-base-100 p-6 md:p-8 rounded-3xl shadow-lg border border-base-content/5 flex flex-col items-center text-center space-y-3 cursor-pointer hover:aura-rainbow duration-2000"
                 >
                   <div className={`p-4 rounded-2xl bg-base-200/50 ${stat.color} transition-colors duration-300`}>
                     <Icon className="w-7 h-7" />
@@ -224,7 +213,6 @@ export default function AboutSection() {
         </div>
       </section>
 
-      {/* 3. CORE VALUES SECTION WITH GLASSMORPHIC CARDS */}
       <section className="py-20 px-6 md:px-16 max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
           <span className="text-xs font-extrabold uppercase tracking-wider text-primary">Our Code of Conduct</span>
@@ -250,7 +238,6 @@ export default function AboutSection() {
                 whileHover={{ scale: 1.01 }}
                 className="group bg-base-100 p-8 rounded-3xl border border-base-content/5 shadow-md flex flex-col md:flex-row items-start gap-6 hover:shadow-xl transition-all duration-300 relative overflow-hidden"
               >
-                {/* Visual hover border decoration */}
                 <div className={`absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b ${val.gradient}`} />
                 
                 <div className={`p-4 rounded-2xl bg-gradient-to-br ${val.gradient} text-white shadow-md self-start shrink-0 group-hover:scale-110 transition-transform duration-300`}>
@@ -267,7 +254,7 @@ export default function AboutSection() {
         </motion.div>
       </section>
 
-      {/* 4. STORY / TIMELINE SECTION WITH SCROLL ENTRY */}
+
       <section className="py-20 px-6 md:px-16 bg-gradient-to-b from-base-200 to-base-100">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16 space-y-4">
@@ -288,10 +275,10 @@ export default function AboutSection() {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                {/* Timeline node */}
+
                 <span className="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-primary border-4 border-base-200 group-hover:scale-125 transition-transform duration-300 shadow-md" />
                 
-                {/* Floating year box left-aligned on medium+ screens */}
+
                 <div className="hidden md:block absolute -left-[140px] top-0 w-24 text-right">
                   <span className="text-2xl font-black text-primary/40 group-hover:text-primary transition-colors duration-300">{item.year}</span>
                 </div>
@@ -307,7 +294,7 @@ export default function AboutSection() {
         </div>
       </section>
 
-      {/* 5. CALL TO ACTION SECTION */}
+
       <section className="py-20 px-6 md:px-16 max-w-7xl mx-auto">
         <motion.div 
           className="relative bg-gradient-to-br from-primary via-orange-600 to-secondary text-white rounded-3xl p-8 md:p-16 overflow-hidden shadow-2xl"
@@ -316,7 +303,7 @@ export default function AboutSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          {/* Floating abstract decorative elements */}
+
           <div className="absolute right-0 top-0 w-96 h-96 bg-white/5 rounded-full blur-3xl translate-x-20 -translate-y-20 pointer-events-none" />
           <div className="absolute left-10 bottom-0 w-64 h-64 bg-black/10 rounded-full blur-2xl pointer-events-none" />
 
@@ -371,5 +358,6 @@ export default function AboutSection() {
       </section>
 
     </div>
+
   );
 }

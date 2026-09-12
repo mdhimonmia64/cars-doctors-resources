@@ -22,9 +22,10 @@ export default async function ServicesSection() {
           return (
             <div
               key={item?._id?.toString()}
-              className="col-span-12 md:col-span-6 lg:col-span-4"
+              className="col-span-12 md:col-span-6 lg:col-span-4 aura aura-holo"
             >
-              <div className="card bg-base-100 shadow-sm">
+              <div className="card bg-base-100 shadow-sm 
+              ">
                 <figure className="px-5 pt-5">
                   <Image
                     src={item?.img || "/fallback.png"}

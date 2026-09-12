@@ -30,7 +30,7 @@ export default function ChooseUs() {
           <div
             key={index}
             className={`border rounded-xl p-5 flex flex-col items-center justify-center gap-2 transition hover:-translate-y-1 hover:bg-red-500 hover:text-white
-            `}
+             `}
           >
             <div className="text-3xl">{item.icon}</div>
             <p className="font-semibold text-sm">{item.title}</p>

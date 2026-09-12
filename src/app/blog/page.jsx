@@ -39,11 +39,11 @@ export default function BlogSection() {
           from Car Doctor professionals.
         </p>
 
-        <div className="grid gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-3 ">
           {blogs.map((blog) => (
             <div
               key={blog.id}
-              className=" border border-gray-600 shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition duration-300"
+              className=" border border-gray-600 shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition duration-300 "
             >
 
               <div className="relative w-full h-[200px]">

@@ -6,6 +6,9 @@ import ProductSection from "./components/ProductSection";
 import MeetOurTeam from "./components/MeetOurTeam";
 import ChooseUs from "./components/ChooseUs";
 import TestimonialSection from "./components/TestimonialSection";
+import CarShowcaseSection from "./components/CarShowcaseSection";
+import EmergencySection from "./components/EmergencySection";
+import FeaturedCars from "./components/FeaturedCars";
 
 export default function Home() {
   return (
@@ -15,9 +18,12 @@ export default function Home() {
     <ServicesSection />
     <TopInfoBar />
     <ProductSection />
+    <FeaturedCars />
     <MeetOurTeam />
     <ChooseUs />
+    <CarShowcaseSection />
     <TestimonialSection />
+    <EmergencySection />
     </div>
   );
 }
